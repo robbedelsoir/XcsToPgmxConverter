@@ -14,6 +14,7 @@ namespace XcsToPgmxConverter
             InitializeComponent(); // This line should be here
             ViewModel = new MainViewModel();
             DataContext = ViewModel;
+            FilesDataGrid.DataContext = ViewModel;
         }
 
 
@@ -32,6 +33,8 @@ namespace XcsToPgmxConverter
                 if (files.Length >= 1) ViewModel.File1 = files[0];
                 if (files.Length >= 2) ViewModel.File2 = files[1];
             }
+
+            
         }
         private void MergeFiles_Click(object sender, RoutedEventArgs e)
         {
